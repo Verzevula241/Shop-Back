@@ -1,15 +1,17 @@
 let express = require('express')
 let app = express();
+let cors = require('cors')
 var port = process.env.PORT || 8080;
 
-app.get('/', (req, res) => res.send('Welcome to Express'));
+app.get('/', (req, res) => {
+    res.send('Welcome to Express')});
 
 app.listen(port, function() {
     console.log("Running FirstRest on Port "+ port);
 })
 
 let apiRoutes = require("./router")
-
+app.use(cors())
 app.use('/api', apiRoutes)
 
 let bodyParser = require('body-parser');
