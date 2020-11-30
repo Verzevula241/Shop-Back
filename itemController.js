@@ -17,7 +17,7 @@ exports.index = function (req, res) {
 
 exports.view = function (req, res) {
     console.log(req.params.item_id)
-    Bio.find({routeName:req.params.item_id}, function (err, bio) {
+    Bio.findOne({routeName:req.params.item_id}, function (err, bio) {
         if (err)
             res.send(err);
         res.json({
