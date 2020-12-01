@@ -7,5 +7,20 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.0",
     "mongoose": "^5.10.15"
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verzevula241/Shop-Back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Verzevula241/Shop-Back/issues"
+  },
+  "homepage": "https://github.com/Verzevula241/Shop-Back#readme",
+  "description": ""
 }
