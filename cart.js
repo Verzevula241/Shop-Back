@@ -2,19 +2,18 @@ var mongoose = require('mongoose');
 //schema
 mongoose.set('useFindAndModify', false);
 var itemSchema = mongoose.Schema({
-    title: {
-        type: String,
-        required: true
+    id: {
+        type: Number
     },
-    routeName: {
-        type: String,
+    cart: {
+        type: Array,
         required: true
     }
     
 });
 
 // Export Bio Model
-var Item = module.exports = mongoose.model('item', itemSchema,"items");
+var Item = module.exports = mongoose.model('cart', itemSchema,"cart");
 module.exports.get = function (callback, limit) {
    Item.find(callback).limit(limit); 
 }
